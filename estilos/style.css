@@ -1,13 +1,150 @@
 @charset "UTF-8";
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body,html {
     background-color: #5F2C82;
     height: 100vh;
     width: 100vw;
+    margin: 0px;
+    padding: 0px;
 }
 
-main {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    background-color: white;
+    width: 250px;
+    height: 522px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+}
+
+div#imagem {
+    display: block;
+    background: #5f2c82 url(../imagens/metal.jpg) no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    height: 200px;
+
+    border-radius: 20px 20px 0px 0px;
+}
+
+div#formulario {
+    text-align: center;
+
+    padding: 8px;
+}
+
+div > h1 {
+    font-size: 2em;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+div > p {
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+.campo {
+    display: block;
+
+    background-color: #5F2C82;
+
+    margin-bottom: 5px;
+
+    border-radius: 8px;
+
+    height: 40px;
+
+    width: 100%;
+}
+
+
+div > input {
+    background-color: #94CFCD;
+
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    border-radius: 8px;
+    height: 28px;
+    border-color: #5f2c82;
+
+    width: calc(100% - 45px);
+    font-size: 1em;
+
+    padding-left:0px;
+}
+
+div > input:focus-within {
+    background-color: white;
+    border: none;
+}
+
+span#item {
+    font-size: 1.6em;
+
+    color: white;
+    transform: translateY(6px);
+}
+
+input#enviar {
+
+    font-size: 1em;
+    margin: auto;
+    display: block;
+    color: white;
+
+    width: 100%;
+    height: 40px;
+
+    border-radius: 8px;
+    border-color: #94CFCD;
+
+    padding: 10px;
+
+    background-color: #53aaa7;
+
+    margin-bottom: 3px;
+}
+
+input#enviar:hover {
+    background-color: #2d6462;
+    cursor: pointer;
+}
+
+a#esqueci {
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 2px;
+    background-color: white;
+    color: #2d6462;
+    border: 1px solid #49a09d;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+a#esqueci:hover {
+    background-color: #8fd4d2;
+}
+
+span#convite {
+    color: #2d6462;
+    transform: translateY(6px);
 }
